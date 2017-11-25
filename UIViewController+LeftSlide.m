@@ -62,31 +62,40 @@ static const void *kMaskViewKey = &kMaskViewKey;
     CGPoint translation = [recognizer translationInView:self.view];
     //NSLog(@"translation.x == %f", translation.x);
     [recognizer setTranslation:CGPointZero inView:self.view];
+    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
     
-    if(UIGestureRecognizerStateBegan == recognizer.state ||
-       UIGestureRecognizerStateChanged == recognizer.state){
-        
-        if (translation.x > 0 ) {//SwipRight
-            return;
-            
-        }else
-        {//SwipLeft
-            
-            CGFloat tempX = CGRectGetMinX(self.view.frame) + translation.x;
-            self.view.frame = CGRectMake(tempX, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+    //---根据手势状态操作
+    switch (recognizer.state) {
+        case UIGestureRecognizerStateBegan:{
+            break;
         }
-        
-    }else
-    {
-        
-        if (CGRectGetMinX(self.view.frame) >= - CGRectGetWidth(self.view.frame) * 0.3) {
+        case UIGestureRecognizerStateChanged:{
+            if (translation.x >= 0 ) {//SwipRight
+                CGFloat tempX = CGRectGetMinX(self.view.frame) + translation.x;
+                if (tempX<0) {
+                    self.view.frame = CGRectMake(tempX, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+                }
+            }else
+            {//SwipLeft
+                
+                CGFloat tempX = CGRectGetMinX(self.view.frame) + translation.x;
+                self.view.frame = CGRectMake(tempX, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+            }
             
-            [self show];
-            
-        }else{
-            
-            [self hide];
+            break;
         }
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateEnded:{
+            if (CGRectGetWidth(self.view.frame) >= - CGRectGetWidth(self.view.frame) * 0.3) {
+                [self show];
+            }else{
+                [self hide];
+            }
+            break;
+        }
+            
+        default:
+            break;
     }
 }
 
