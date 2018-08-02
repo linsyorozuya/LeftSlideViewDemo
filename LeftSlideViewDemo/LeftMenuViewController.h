@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "UIViewController+SlideFromSide.h"
+
 @interface LeftMenuViewController : UIViewController
 - (void)showFromLeft;
 @end

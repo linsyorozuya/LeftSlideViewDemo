@@ -22,15 +22,10 @@
 }
 
 - (IBAction)openEvent:(id)sender {
-    if (!self.menu) {
-        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        self.menu = [story instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
-        CGRect frame = self.menu.view.frame;
-        frame.origin.x = - CGRectGetWidth(self.view.frame);
-        self.menu.view.frame = frame;
-        
-        [[UIApplication sharedApplication].keyWindow addSubview:self.menu.view];
-    }
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    self.menu = [story instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
+    self.menu.view.frame = CGRectMake(0, 0, 300, self.view.bounds.size.height);
+    [self.menu initSlideFoundationWithDirection:SlideDirectionFromLeft];
     [self.menu showFromLeft];
 }
 

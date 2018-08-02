@@ -8,7 +8,6 @@
 
 #import "LeftMenuViewController.h"
 #import "LeftMenuCell.h"
-#import "UIViewController+LeftSlide.h"
 
 @interface LeftMenuViewController ()
 @property (nonatomic,strong) NSArray *tableViewItems;
@@ -24,9 +23,6 @@
                         @{@"imageName":@"",@"itemName":@"我的"},
                         @{@"imageName":@"",@"itemName":@"我的"}
                         ];
-
-    // 添加从左划入的功能
-    [self initSlideFoundation];
 }
 
 #pragma mark -- show or hide

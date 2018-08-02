@@ -15,7 +15,7 @@
 		ECF92E5D1F5FE02B00221075 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF92E5C1F5FE02B00221075 /* main.m */; };
 		ECF92E671F5FE02B00221075 /* LeftSlideViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF92E661F5FE02B00221075 /* LeftSlideViewDemoTests.m */; };
 		ECF92E721F5FE02B00221075 /* LeftSlideViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF92E711F5FE02B00221075 /* LeftSlideViewDemoUITests.m */; };
-		ECF92E811F5FE08D00221075 /* UIViewController+LeftSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF92E801F5FE08D00221075 /* UIViewController+LeftSlide.m */; };
+		ECF92E811F5FE08D00221075 /* UIViewController+SlideFromSide.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF92E801F5FE08D00221075 /* UIViewController+SlideFromSide.m */; };
 		ECF92E871F5FE16200221075 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF92E821F5FE16200221075 /* LeftMenuViewController.m */; };
 		ECF92E881F5FE16200221075 /* LeftMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF92E861F5FE16200221075 /* LeftMenuCell.m */; };
 /* End PBXBuildFile section */
@@ -54,8 +54,8 @@
 		ECF92E6D1F5FE02B00221075 /* LeftSlideViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeftSlideViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF92E711F5FE02B00221075 /* LeftSlideViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftSlideViewDemoUITests.m; sourceTree = "<group>"; };
 		ECF92E731F5FE02B00221075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECF92E7F1F5FE08D00221075 /* UIViewController+LeftSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LeftSlide.h"; sourceTree = SOURCE_ROOT; };
-		ECF92E801F5FE08D00221075 /* UIViewController+LeftSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LeftSlide.m"; sourceTree = SOURCE_ROOT; };
+		ECF92E7F1F5FE08D00221075 /* UIViewController+SlideFromSide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SlideFromSide.h"; sourceTree = SOURCE_ROOT; };
+		ECF92E801F5FE08D00221075 /* UIViewController+SlideFromSide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SlideFromSide.m"; sourceTree = SOURCE_ROOT; };
 		ECF92E821F5FE16200221075 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		ECF92E831F5FE16200221075 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
 		ECF92E851F5FE16200221075 /* LeftMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuCell.h; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 		ECF92E411F5FE02B00221075 = {
 			isa = PBXGroup;
 			children = (
-				ECF92E7F1F5FE08D00221075 /* UIViewController+LeftSlide.h */,
-				ECF92E801F5FE08D00221075 /* UIViewController+LeftSlide.m */,
+				ECF92E7F1F5FE08D00221075 /* UIViewController+SlideFromSide.h */,
+				ECF92E801F5FE08D00221075 /* UIViewController+SlideFromSide.m */,
 				ECF92E4C1F5FE02B00221075 /* LeftSlideViewDemo */,
 				ECF92E651F5FE02B00221075 /* LeftSlideViewDemoTests */,
 				ECF92E701F5FE02B00221075 /* LeftSlideViewDemoUITests */,
@@ -293,7 +293,7 @@
 				ECF92E5D1F5FE02B00221075 /* main.m in Sources */,
 				ECF92E4F1F5FE02B00221075 /* AppDelegate.m in Sources */,
 				ECF92E871F5FE16200221075 /* LeftMenuViewController.m in Sources */,
-				ECF92E811F5FE08D00221075 /* UIViewController+LeftSlide.m in Sources */,
+				ECF92E811F5FE08D00221075 /* UIViewController+SlideFromSide.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
