@@ -26,7 +26,7 @@
     self.menu = [story instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
     self.menu.view.frame = CGRectMake(0, 0, 300, self.view.bounds.size.height);
     [self.menu initSlideFoundationWithDirection:SlideDirectionFromLeft];
-    [self.menu showFromLeft];
+    [self.menu show];
 }
 
 - (void)didReceiveMemoryWarning {

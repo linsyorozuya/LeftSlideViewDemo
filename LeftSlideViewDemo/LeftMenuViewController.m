@@ -26,11 +26,6 @@
 }
 
 #pragma mark -- show or hide
-- (void)showFromLeft
-{
-    [self show];
-}
-
 - (IBAction)hideToLeft:(id)sender {
     [self hide];
 }
