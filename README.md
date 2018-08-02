@@ -1,19 +1,20 @@
 # LeftSlideViewDemo
 
-在需要作为侧边栏的视图中添加以下代码即可：
+在需要作为侧边栏的视图中添加以下代码即可，例如：
 
-    [self initSlideFoundation];
-
-在视图中实现开放一个类给需要展现侧边栏的试图调用，例如：
-
-    - (void)showFromLeft{
-       [self show];
-    }
-
-    - (IBAction)hideToLeft:(id)sender {
-       [self hide];
-    }
-
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    self.menu = [story instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
+    self.menu.view.frame = CGRectMake(0, 0, 300, self.view.bounds.size.height);
+    [self.menu initSlideFoundationWithDirection:SlideDirectionFromLeft];
+ 
+显示：
+    
+    [self.menu show];
+    
+隐藏：
+    
+    [self.menu hide];
+    
 效果如下：
 
 ![gif](https://github.com/linsyorozuya/LeftSlideViewDemo/blob/master/leftslide.gif)
